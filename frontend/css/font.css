@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+* {
+    font-family: var(--font);
+    color: var(--black);
+}
+
+h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.956rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1.561rem;
+    font-weight: 400;
+}
+
+.h3-500 {
+    font-size: 1.561rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.h4-500 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+h5 {
+    font-size: 5.25rem;
+    font-weight: 400;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+.p-500 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.pSmall {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
