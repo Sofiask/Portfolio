@@ -1,7 +1,9 @@
 html, body {
     background-color: var(--background-color);
     font-size: 18px;
+    scroll-behavior: smooth;
 }
+
 
 .skip-to {
     position: absolute;
@@ -22,6 +24,7 @@ header {
     z-index: 5;
     display: flex;
     justify-content: end;
+    min-height: 5rem;
 }
 
 header img {
@@ -55,17 +58,26 @@ nav ul {
 }
 
 .overlay-menu ul {
-    height: 100vh;
+    height: 20rem;
+    margin: 5rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
-    font-size: 2rem;
-    color: var(--background-color);
+    font-size:  1.956rem;
 }
 
 .overlay-menu ul a {
-    color: var(--font);
+    color: var(--black);
+}
+
+.overlay-menu img {
+    width: 1.9rem;
+}
+
+.close {
+    display: flex;
+    justify-content: end;
 }
 
 @media screen and (min-width: 540px) {
@@ -91,7 +103,6 @@ nav ul {
 .hero {
     width: 100vw;
     height: 100vh;
-    background-color: rgb(64, 96, 96);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -100,17 +111,57 @@ nav ul {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transform: translateY(-60px);
+    transform: translateY(-100px);
 }
 
 .hero .arrow {
-    width: 3rem;
+    width: 2rem;
     margin: 1rem;
+    animation: bounceArrow;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounceArrow {
+    from {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(0px)
+    }
 }
 
 .hero-title {
     margin: auto 0;
 }
+
+.hero-title h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 12vw;
+    font-weight: 400;
+}
+
+.hero-title h3 {
+    font-size: 5vw;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 680px) {
+    .hero-title h1 {
+        font-size: 8vw;
+    }
+    .hero-title h3 {
+        font-size: 2vw;
+    }
+}
+
+
 
 
 /* absolute och relative */
@@ -118,74 +169,29 @@ nav ul {
 .main--centered {
     max-width: var(--max-width);
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 10rem auto;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    padding: 2rem 0 0 0;
 }
 
 
-a:link { 
-    text-decoration: none; 
+a:link {
+    text-decoration: none;
 }
 
-a:hover { 
-    font-weight: 500;
+.nav ul li {
+    border-bottom: 0.15rem solid transparent;
+    transition: all 0.3s ease-in-out;
+    padding: 0 0.5rem 0.1rem 0.5rem;
 }
 
-.projectContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.nav ul li:hover {
+   border-bottom: 0.15rem solid var(--black);
+   font-weight: 500;
 }
 
-.card {
-    background-color: var(--purple);
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-}
-
-.card img {
-    width: 100%;
-}
-
-
-.card-TextBox {
-    background-color: var(--purple);
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-}
-
-.buttonBox {
-    display: flex;
-    justify-content: center;
-}
-
-button {
-    font-family: var(--font);
-    font-size: 1.25rem;
-    padding: 1rem;
-    background-color: var(--purple);
-    width: 20%;
-    border: none;
-}
-
-button:hover {
-    font-family: var(--font);
-    font-size: 1.25rem;
-    font-weight: 500;
-    padding: 1rem;
-    background-color: var(--purple2);
-    width: 20%;
-    border: none;
-}
 
 footer {
     width: 100%;
@@ -205,7 +211,7 @@ footer {
 }
 
 /* test carlo */
-.cardCarlo {
+.card {
     width: 24rem;
     display: inline-block;
     background-color: var(--purple);
@@ -214,12 +220,12 @@ footer {
 }
 
 
-.cardCarlo h3 {
+.card h3 {
     margin: 1rem;
     text-align: center;
 }
 
-.cardCarlo p {
+.card p {
     margin: 0.5rem;
     text-align: center;
 }
@@ -232,7 +238,7 @@ footer {
     justify-content: center;
 }
 
-.cardCarlo img {
+.card img {
     width: 22rem;
     height: 20rem;
     object-fit: cover;

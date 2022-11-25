@@ -38,7 +38,7 @@ async function getData() {
     result.forEach(project => {
       const cardEl = document.createElement('a'); // bygger en 'a'-tag (variabel) för alla element från sanity
     
-      cardEl.classList.add('cardCarlo'); //bygger en class
+      cardEl.classList.add('card'); //bygger en class
       cardEl.setAttribute('href', `/${project.slug.current}`); // lagar en link - attribut - verdi av slug från sanity
       
       const coverEl = document.createElement('img'); //importera bilde från sanity
