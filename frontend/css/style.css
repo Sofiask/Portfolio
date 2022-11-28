@@ -117,11 +117,17 @@ nav ul {
 
 .hero .arrow {
     width: 2rem;
-    margin: 1rem;
+    margin: 3rem;
     animation: bounceArrow;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+}
+
+@media screen and (min-width: 540px) {
+    .hero .arrow {
+        margin: 1rem;
+    }
 }
 
 @keyframes bounceArrow {
@@ -162,11 +168,6 @@ nav ul {
     }
 }
 
-
-
-
-/* absolute och relative */
-
 .main--centered {
     max-width: var(--max-width);
     width: 100%;
@@ -174,9 +175,23 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 2rem 0 0 0;
 }
 
+.main--centered h2 {
+    padding: 0 0 0 1rem;
+}
+
+
+@media screen and (min-width: 890px) {
+    .main--centered h2 {
+        padding: 0;
+    }
+
+    .main--centered {
+        padding: 2rem 0 0 0;
+    }
+    
+}
 
 a:link {
     text-decoration: none;
