@@ -103,7 +103,7 @@ nav ul {
 
 .hero {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -127,6 +127,10 @@ nav ul {
 @media screen and (min-width: 540px) {
     .hero .arrow {
         margin: 1rem;
+    }
+
+    .hero {
+        height: 100vh;
     }
 }
 
