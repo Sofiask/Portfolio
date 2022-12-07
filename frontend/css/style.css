@@ -1,5 +1,5 @@
 html, body {
-    background-color: var(--background-color);
+    background-color: var(--background-color-home);
     font-size: 18px;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -103,7 +103,7 @@ nav ul {
 
 .hero {
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -117,7 +117,7 @@ nav ul {
 
 .hero .arrow {
     width: 2rem;
-    margin: 3rem;
+    margin: 1rem;
     animation: bounceArrow;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
@@ -125,10 +125,6 @@ nav ul {
 }
 
 @media screen and (min-width: 540px) {
-    .hero .arrow {
-        margin: 1rem;
-    }
-
     .hero {
         height: 100vh;
     }

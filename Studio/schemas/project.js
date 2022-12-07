@@ -33,11 +33,64 @@ export default {
             type: 'blockContent',
         },
         {
+            name: 'coreProblem',
+            title: 'Core problem',
+            type: 'blockContent',
+        },
+        {
+            name: 'solution',
+            title: 'Solution',
+            type: 'blockContent',
+        },
+        {
+            name: 'links',
+            title: 'Links to project',
+            type: 'array', // flere av samma element
+            of: [{type:'string'}] 
+        },
+        {
             name: 'gallery',
             title: 'Pictures',
             type: 'array', // flere av samma element
             of: [{type:'image'}] // av vad? images
         },
+        {
+            name: 'individualProject',
+            title: 'Individual project',
+            type: 'boolean'
+        },
+        {
+            name: 'teamProject',
+            title: 'Team project',
+            type: 'boolean'
+        },
+    {   name: 'Date',
+        title: 'Year',
+        type: 'string',
+    },
+    {
+        name: 'from',
+        title: 'From',
+        type: 'date'
+    },
+    {
+        name: 'to',
+        title: 'To',
+        type: 'date'
+    },
+    {
+        name: 'delivery',
+        title: 'Delivery details',
+        type: 'array',
+        of: [
+            {
+                type: 'reference',
+                to: [
+                    {type: 'delivery'}
+                ]
+            }
+        ]
+    },
         {
             name: 'tools',
             title: 'Tools',
@@ -47,19 +100,6 @@ export default {
                     type: 'reference',
                     to: [
                         {type: 'software'}
-                    ]
-                }
-            ]
-        },
-        {
-            name: 'delivery',
-            title: 'Delivery details',
-            type: 'array',
-            of: [
-                {
-                    type: 'reference',
-                    to: [
-                        {type: 'delivery'}
                     ]
                 }
             ]
@@ -91,49 +131,13 @@ export default {
             ]
         },
         {
-            name: 'Date',
-            title: 'Year',
-            type: 'string',
-        },
-        {
-            name: 'from',
-            title: 'From',
-            type: 'date'
-        },
-        {
-            name: 'to',
-            title: 'To',
-            type: 'date'
-        },
-        {
-            name: 'links',
-            title: 'Links to project',
-            type: 'array', // flere av samma element
-            of: [{type:'string'}] 
-        },
-        {
-            name: 'individualProject',
-            title: 'Individual project',
-            type: 'boolean'
-        },
-        {
-            name: 'teamProject',
-            title: 'Team project',
-            type: 'boolean'
-        },
-        {
-            name: 'designProcess',
-            title: 'Design process',
-            type: 'blockContent',
-        },
-        {
             name: 'research',
             title: 'Research',
             type: 'blockContent',
         },
         {
-            name: 'coreProblem',
-            title: 'Core problem',
+            name: 'moodboard',
+            title: 'Moodboard',
             type: 'blockContent',
         },
         {
@@ -157,8 +161,8 @@ export default {
             type: 'blockContent',
         },
         {
-            name: 'solution',
-            title: 'Solution',
+            name: 'projectSolution',
+            title: 'Project solution',
             type: 'blockContent',
         },
         {

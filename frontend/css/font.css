@@ -6,15 +6,20 @@
     color: var(--black);
 }
 
-h1 {
+.h1Logo {
     font-family: 'Playfair Display SC', serif;
     font-size: 2.5rem;
     font-weight: 400;
 }
 
+h1 {
+    font-size: 2.75rem;
+    font-weight: 400;
+}
+
 h2 {
     font-size: 1.956rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 h3 {

@@ -1,0 +1,256 @@
+project, html, body {
+    background-color: var(--background-color-project)
+}
+
+.header-project {
+    width: 100%;
+    background: var(--background-color-project);
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: end;
+    min-height: 2rem;
+}
+
+.main--centered-project {
+    max-width: var(--max-width);
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    transform: translateY(-100px);
+}
+
+.project-hero {
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-100px);
+}
+
+.single-project-title h1 {
+    width: 100%;
+}
+
+.textBoxSmall {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.textBoxSmall h4 {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.textBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.textBox img {
+    margin-bottom: 1rem;
+}
+
+.textBox h4 {
+    font-weight: 500;
+    margin-bottom: -0.8rem;
+}
+
+.underline {
+    /* display: flex;
+    flex-direction: column;
+    gap: 0.5rem; */
+}
+
+.underline p {
+    border-bottom: 0.05rem solid var(--black);
+    padding: 0 0 0.8rem 0;
+}
+
+.projectContainer {
+    width: 100%;
+}
+
+.projectContainer h2 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+}
+
+.projectDetails {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+
+@media screen and (min-width: 540px) {
+    .main--centered-project  {
+        margin: 0 auto 10rem auto;
+    }
+
+    .projectDetails {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .description {
+        width: 45ch;
+    }
+
+    .underline p {
+        border-bottom: none;
+    }
+
+    .textBox {
+        width: 70%;
+        max-width: var(--max-width);
+        gap: 0.5rem;
+        margin: 0 auto;
+    }
+
+    .textBox p,
+    .textBox h2,
+    .textBox h3,
+    .textBox h4 {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .project-hero {
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        flex-flow: column nowrap;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 3rem;
+        transform: translateY(-150px);
+    }
+}
+
+/* carlo bilde sanity */
+.project__blockImg {
+    width: 100%;
+}
+
+#briefContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#coreContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#solutionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#linkContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#researchContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#personasContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#moodboardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#lofiContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*#lofiContent img {
+    margin-bottom: 1rem;
+}*/
+
+#hifiContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#projectSolutionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#designContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#designContent img {
+    width: 20rem;
+    margin: 0 auto;
+}
+
+
+#developmentContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#thingsILearnedContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#devTools {
+    border-bottom: 0.05rem solid var(--black);
+    padding: 0 0 0.8rem 0;
+}
+
+@media screen and (min-width: 540px) {
+
+    #devTools {
+        border-bottom: none;
+    }
+}
