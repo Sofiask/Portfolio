@@ -59,12 +59,6 @@ project, html, body {
     margin-bottom: -0.8rem;
 }
 
-.underline {
-    /* display: flex;
-    flex-direction: column;
-    gap: 0.5rem; */
-}
-
 .underline p {
     border-bottom: 0.05rem solid var(--black);
     padding: 0 0 0.8rem 0;
