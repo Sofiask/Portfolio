@@ -29,10 +29,6 @@ project, html, body {
     transform: translateY(0px);
 }
 
-.single-project-title h1 {
-    width: 100%;
-}
-
 .textBoxSmall {
     display: flex;
     flex-direction: column;
@@ -166,8 +162,8 @@ project, html, body {
 #linkContent {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
-
 
 #researchContent {
     display: flex;

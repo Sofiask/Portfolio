@@ -2,11 +2,21 @@ import { cdnUrl } from "./env.js";
 
 export function readUrl() {
     // lager en prosjektside kun for ett prosjekt fra sanity
+    const allUrl = window.location.href;
+    if(allUrl.includes('about-me')) {
+        return 'about-me'
+    }
+    if(allUrl.includes('contact')) {
+        return 'contact'
+    }
+    if(allUrl.includes('project')) {
         const urlString = window.location.search;
-        if(urlString){
-            return (urlString.slice(1))
+        console.log(urlString)
+        if(urlString) {
+            return (urlString.slice(1)); // slice remove the "?" from the url
         }
-        return undefined;    
+    }
+        return undefined;   
 }
 
 // hämtar array från block-content i sanity, bygger innehåll och hämtar 'p'

@@ -56,6 +56,7 @@ async function getProject() {
 }
 
 function renderSingleProject(result){
+  console.log(result)
     const titleEl = document.querySelector('.single-project-title');
     titleEl.textContent = result[0].title;
     const coverProjectEl = document.querySelector('.project-hero');
