@@ -125,7 +125,7 @@ function renderProjectsList (result) {
       const cardEl = document.createElement('a'); // bygger en 'a'-tag (variabel) för alla element från sanity
     
       cardEl.classList.add('card'); //bygger en class
-      cardEl.setAttribute('href', `/projects/?${project.slug.current}`); // lagar en link - attribut - verdi av slug från sanity
+      cardEl.setAttribute('href', `/project/?${project.slug.current}`); // lagar en link - attribut - verdi av slug från sanity
       
       const coverEl = document.createElement('img'); //importera bilde från sanity
       coverEl.setAttribute('src', project.bilde); //importera bilde från sanity

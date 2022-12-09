@@ -4,119 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/font.css">
-    <link rel="stylesheet" href="../css/variables.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/project.css">
+    <link rel="icon" type="" href="./css/assets/logosvart.png">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/project.css">
     <script type="module" src="../js/app.js"></script>
     <title>Portfolio of Sofia Skärberg - UX/UI designer</title>
     <meta name="description" content="Nyutdannet UX-designer">
 </head>
-<body>
+<body class="background-pink">
     <a href="#main-content" class="skip-to">
         Skip to main content
     </a>
-    <header class="header-project">
+    <header>
         <nav class="nav">
+            <a href="./index.html"><img src="./css/assets/logosvart.png" alt=""></a>
+            
             <ul>
-                <li><a href="/aboutMe">About me</a></li>
-                <li><a href="/myWork">My work</a> </li>
+                <li><a href="/about-me">About me</a></li>
+                <li><a href="/projects/">My work</a> </li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
 
         <nav class="overlay-menu hidden">
             <div class="close">
-                <img src="../css/assets/X.svg">
+                <img src="./css/assets/X.svg">
             </div>
             <ul>
-                <li><a href="/aboutMe">About me</a></li>
-                <li><a href="/myWork">My work</a> </li>
+                <li><a href="/about-me">About me</a></li>
+                <li><a href="/projects">My work</a> </li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
 
-        <img src="../css/assets/hamburger.svg"  class="mobile-menu-icon" alt="menu">
+        <img src="./css/assets/hamburger.svg"  class="mobile-menu-icon" alt="menu">
     </header>
 
-    <div class="project-hero">
-        
-    </div>
-    
-
-    <main class="main--centered-project">
-        <div class="textBoxSmall">
-            <h1 class="single-project-title"></h1>
-            <p></p>
-        </div>
-        <section class="projectContainer">
-            <h2>Project details</h2>
-            <div class="projectDetails">
-                <div class="details">
-                    <div class="textBoxSmall underline">
-                        <h4>School project</h4>
-                        <p></p>
-                    </div>
-                    <div class="textBoxSmall underline">
-                        <h4>Individual project</h4>
-                        <p></p>
-                    </div>
-                    <div class="textBoxSmall underline">
-                        <h4>Duration</h4>
-                        <p>8 weeks, 2022</p>
-                    </div>
-                    <div class="textBoxSmall underline">
-                        <h4>Delivery</h4>
-                        <p>UX/UI design
-                            <br>
-                            Web development
-                        </p>
-                    </div>
-                    <div class="textBoxSmall underline">
-                        <h4>Design tool</h4>
-                        <p>Figma</p>
-                    </div>
-                    <div class="textBoxSmall underline">
-                        <h4>Project management</h4>
-                        <p>Jira
-                            <br>
-                            Miro
-                        </p>
-                    </div>
-                    <div class="textBoxSmall underline" id="devTools">
-                        <h4>Development tool</h4>
-                    </div>
-                </div>
-                <div class="description">
-                    <div class="textBoxSmall">
-                        <div id="briefContent"></div>
-                    </div>
-                    <div class="textBoxSmall">
-                        <div id="coreContent"></div>
-                    </div>
-                    <div class="textBoxSmall">
-                        <div id="solutionContent"></div>
-                    </div>
-                    <div class="textBoxSmall">
-                        <div id="linkContent">
-                            <h4>Links to project</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-        </section> 
-        <section class="textBox" id="researchContent"></section>
-        <section class="textBox" id="personasContent"></section>
-        <section class="textBox" id="moodboardContent"></section>
-        <section class="textBox" id="lofiContent"></section>
-        <section class="textBox" id="hifiContent"></section>
-        <section class="textBox" id="projectSolutionContent"></section>
-        <section class="textBox" id="designContent"></section>   
-        <section class="textBox" id="developmentContent"></section>
-        <section class="textBox" id="thingsILearnedContent"></section>     
+    <main class="main--centered" id="main-content">
+        <h2>My projects</h2>
+        <section class="projectWrapper">
+           
+        </section>
     </main>
-
     <footer>
         <div class="footer--centered">
            <h3>Contact me</h3> 
@@ -125,6 +57,11 @@
             <br>
             Just reach out to me, mail or linkedIn!</p>
         </div>
+        
     </footer>
+    
+    <section id="projects-list">
+    </section>
+
 </body>
 </html>

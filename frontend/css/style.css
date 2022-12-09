@@ -36,6 +36,10 @@ header img {
     display: none;
 }
 
+.nav img {
+    width: 3rem;
+}
+
 
 nav ul {
     display: flex;
@@ -88,7 +92,7 @@ nav ul {
         min-height: 3rem;
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: space-between;
         padding: 0 2rem;
     }
 
@@ -181,6 +185,10 @@ nav ul {
     padding: 0 0 0 1rem;
 }
 
+.background-pink {
+    background-color: var(--background-color-home);
+}
+
 
 @media screen and (min-width: 890px) {
     .main--centered h2 {
@@ -217,7 +225,7 @@ footer {
 
 .footer--centered{
     max-width: var(--max-width);
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
