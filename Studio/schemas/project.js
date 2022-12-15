@@ -64,6 +64,16 @@ export default {
             title: 'Team project',
             type: 'boolean'
         },
+        {
+            name: 'schoolProject',
+            title: 'School project',
+            type: 'boolean'
+        },
+        {
+            name: 'clientProject',
+            title: 'Client project',
+            type: 'boolean'
+        },
     {   name: 'Date',
         title: 'Year',
         type: 'string',

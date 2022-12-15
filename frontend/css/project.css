@@ -12,6 +12,10 @@ project, html, body {
     min-height: 2rem;
 }
 
+.back-icon img {
+    width: 1.5rem;
+}
+
 .main--centered-project {
     max-width: var(--max-width);
     margin: 1rem;
@@ -91,7 +95,7 @@ project, html, body {
 
 @media screen and (min-width: 540px) {
     .main--centered-project  {
-        margin: 0 auto 10rem auto;
+        margin: 0 auto 0 auto;
         transform: translateY(-100px);
     }
 
@@ -257,9 +261,57 @@ project, html, body {
     padding: 0 0 0.8rem 0;
 }
 
+#projectManagement {
+    border-bottom: 0.05rem solid var(--black);
+    padding: 0 0 0.8rem 0;
+}
+
+#designTool {
+    border-bottom: 0.05rem solid var(--black);
+    padding: 0 0 0.8rem 0;
+}
+
+#deliveryDetails {
+    border-bottom: 0.05rem solid var(--black);
+    padding: 0 0 0.8rem 0;
+}
+
+.duration {
+    border-bottom: 0.05rem solid var(--black);
+    padding: 0 0 0.8rem 0;
+}
+
 @media screen and (min-width: 540px) {
 
     #devTools {
         border-bottom: none;
     }
+    #projectManagement {
+        border-bottom: none;
+    }
+    #designTool {
+        border-bottom: none;
+    }
+    #deliveryDetails {
+        border-bottom: none;
+    }
+    .duration {
+        border-bottom: none;
+    }
+}
+
+.progress-container {
+    background-color: var(--background-color-home);
+    height: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+.progress-bar {
+    background-color: var(--pink);
+    height: 10px;
+    width: 0%;
 }

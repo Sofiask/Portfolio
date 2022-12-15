@@ -2,6 +2,11 @@ import handleHamburger from './menu.js';
 import { readUrl } from './utils.js';
 import { sanityUrl } from './env.js';
 import { handleParagraphs } from './utils.js';
+import { plotTools } from './details.js';
+import { plotLinks } from './details.js';
+import { plotManagement } from './details.js';
+import  {plotDesign } from './details.js';
+import { plotDelivery } from './details.js';
 
 // invoke hamburgermeny
 handleHamburger();
@@ -23,7 +28,7 @@ const queryAllProjects = `
 // ordet "bilde" är eget ord
 
 //henter all data från sanity for enkelt prosjekt
-const querySingleProject = `
+const querySingleProject = `//groq
 *[slug.current == "${urlString}"]{
     title,
     "cover":cover.asset->url,
@@ -42,7 +47,14 @@ const querySingleProject = `
     thingsILearned,
     moodboard,
     developmentTools[]->,
-    projectManagement[]->
+    projectManagement[]->,
+    tools[]->,
+    delivery[]->,
+    Date,
+    individualProject,
+    schoolProject,
+    clientProject,
+    teamProject
 }
 `;
 
@@ -52,19 +64,41 @@ const querySingleProject = `
 async function getProject() {
       const response = await fetch (`${sanityUrl}${encodeURI(querySingleProject)}`);
       const { result } = await response.json();
+      console.log(result)
       renderSingleProject(result);
 }
 
 function renderSingleProject(result){
-  console.log(result)
+ 
     const titleEl = document.querySelector('.single-project-title');
     titleEl.textContent = result[0].title;
     const coverProjectEl = document.querySelector('.project-hero');
     coverProjectEl.setAttribute('style', `background-image: url(${result[0].cover}`);
     const textEl = document.querySelector('.textBoxSmall p');
     textEl.textContent = result[0].description;
+    const durationEl = document.querySelector('.duration');
+    durationEl.textContent = result[0].Date;
+    console.log(durationEl)
+  
+    if(result[0].individualProject){
+      const individualEl = document.querySelector('#individualProject');
+      individualEl.setAttribute('style', 'display: block');
+    }
 
-    console.log(result[0])
+    if(result[0].schoolProject){
+      const schoolEl = document.querySelector('#schoolProject');
+      schoolEl.setAttribute('style', 'display: block');
+   }
+
+   if(result[0].teamProject) {
+    const teamEl = document.querySelector('#teamProject');
+    teamEl.setAttribute('style', 'display: block');
+   }
+
+   if(result[0].clientProject) {
+    const clientEl = document.querySelector('#clientProject');
+    clientEl.setAttribute('style', 'display: block');
+   }
 
     handleParagraphs(result[0].brief, 'briefContent'); // resultat av funktionen i utils.js där vi hämtar data från block-content i Sanity
     handleParagraphs(result[0].coreProblem, 'coreContent');
@@ -82,28 +116,12 @@ function renderSingleProject(result){
 
     plotTools(result[0].developmentTools, 'devTools');
     plotLinks(result[0].links, 'linkContent');
+    plotManagement(result[0].projectManagement, 'projectManagement');
+    plotDesign(result[0].tools, 'designTool');
+    plotDelivery(result[0].delivery, 'deliveryDetails');
 }
 
-function plotTools(tools, container) {
-  const toolsContainer = document.getElementById(container);
-  tools.map(tool => {
-    const spanEl = document.createElement('span');
-    spanEl.textContent = `${tool.developmentTools}, `;
-    toolsContainer.append(spanEl);
-  })
-}
 
-function plotLinks(links, container) {
-  const linksContainer = document.getElementById(container);
-  links.map(link => {
-    console.log(linksContainer)
-    const linkEl = document.createElement('a');
-    linkEl.setAttribute('href', link);
-    linkEl.setAttribute('target', '_blank');
-    linkEl.textContent = link;
-    linksContainer.append(linkEl)
-  });
-}
 
 if(urlString !== undefined) {
     getProject();
@@ -147,3 +165,14 @@ function renderProjectsList (result) {
 if(urlString === undefined) {
   getAllProjects(); //invoke function
 }
+
+function progressBarScroll() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+      height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+      scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+}
+
+window.onscroll = function () {
+  progressBarScroll();
+};
