@@ -78,7 +78,6 @@ function renderSingleProject(result){
     textEl.textContent = result[0].description;
     const durationEl = document.querySelector('.duration');
     durationEl.textContent = result[0].Date;
-    console.log(durationEl)
   
     if(result[0].individualProject){
       const individualEl = document.querySelector('#individualProject');
@@ -99,8 +98,9 @@ function renderSingleProject(result){
     const clientEl = document.querySelector('#clientProject');
     clientEl.setAttribute('style', 'display: block');
    }
-
-    handleParagraphs(result[0].brief, 'briefContent'); // resultat av funktionen i utils.js där vi hämtar data från block-content i Sanity
+    if(result[0].brief !== '') {
+      handleParagraphs(result[0].brief, 'briefContent'); // resultat av funktionen i utils.js där vi hämtar data från block-content i Sanity
+    }
     handleParagraphs(result[0].coreProblem, 'coreContent');
     handleParagraphs(result[0].research, 'researchContent');
     handleParagraphs(result[0].solution,'solutionContent');

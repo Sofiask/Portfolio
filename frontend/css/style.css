@@ -196,9 +196,9 @@ nav ul {
     padding: 0 0 0 1rem;
 }
 
-.background-pink {
+/*.background-pink {
     background-color: var(--background-color-home);
-}
+}*/
 
 
 @media screen and (min-width: 890px) {
@@ -206,9 +206,9 @@ nav ul {
         padding: 0;
     }
 
-    .main--centered {
+   /* .main--centered {
         padding: 2rem 0 0 0;
-    }
+    }*/
     
 }
 
