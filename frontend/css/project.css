@@ -133,13 +133,13 @@ project, html, body {
 @media screen and (min-width: 640px) {
     .project-hero {
         width: 100vw;
-        height: 80vh;
+        height: 120vh;
         display: flex;
         flex-flow: column nowrap;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position-y: 3rem;
-        transform: translateY(-150px);
+        background-position-y: 7rem;
+        transform: translateY(-160px);
     }
 }
 
