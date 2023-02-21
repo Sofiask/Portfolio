@@ -79,6 +79,11 @@ function renderSingleProject(result){
     const durationEl = document.querySelector('.duration');
     durationEl.textContent = result[0].Date;
   
+  /*if(result[0].developmentTools) {
+    const devToolsEl = document.querySelector('#devTools');
+    devToolsEl.setAttribute('style', 'display: block');
+  }*/
+
     if(result[0].individualProject){
       const individualEl = document.querySelector('#individualProject');
       individualEl.setAttribute('style', 'display: block');
